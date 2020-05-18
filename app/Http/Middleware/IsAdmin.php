@@ -17,8 +17,7 @@ class IsAdmin
     {
         if(auth()->user()->isAdmin()) {
             return $next($request);
-            return redirect('/yesadmin');
         }
-        return redirect('/noadmin');
+        return redirect('/home');
     }
 }
